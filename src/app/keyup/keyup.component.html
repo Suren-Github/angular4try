@@ -1,0 +1,17 @@
+<h3> KeyUp </h3>
+<input type="text" (keyup) = "onKeyUp($event)" [(ngModel)]= "keyUpField"/>
+<button (click) = "clearKeyUpText($event)">Clear Me!</button>
+<p> {{enteredText}}</p>
+<hr/>
+
+
+<h3> OnEnter</h3>
+<input type="text" #box (keyup.enter) = "onKeyEnter(box.value)" />
+<p> {{onEnteredText}}</p>
+<hr/>
+
+
+<h3> OnEnter and OnBlur</h3>
+<input type="text" #box2 (keyup.enter) = "onKeyEnter2(box2.value)" 
+  (blur) = "onKeyEnter2(box2.value)" />
+<p> {{onEnteredText2}}</p>
