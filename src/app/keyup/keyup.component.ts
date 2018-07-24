@@ -16,6 +16,7 @@ export class KeyupComponent {
   onEnteredText = '';  
   onEnteredText2 = '';
   keyUpField = "Hello World";
+  heroes = new Array();
 
   clearKeyUpText(event: any) {
     this.keyUpField = '';
@@ -36,4 +37,12 @@ export class KeyupComponent {
   onKeyEnter2(value: any) {
     this.onEnteredText2 = value;
   };
-}
+
+  addHero(hero: string){
+
+    if(hero) {
+      this.heroes.push(hero);
+    }    
+  };
+
+};
